@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bruno Gabriel | Full Stack</title>
+
+  <!-- ===== CSS principal ===== -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/feather-icons@4.29.2/dist/feather.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===== Barra de navegação fixa ===== -->
+  <header class="navbar">
+    <a href="#home" class="logo">Bruno Gabriel</a>
+    <nav id="nav">
+      <a href="#sobre">Sobre</a>
+      <a href="#tecnologias">Tecnologias</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#projetos">Projetos</a>
+      <a href="#experiencia">Experiência</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <button id="btn-mobile" aria-label="Menu mobile">☰</button>
+  </header>
+
+  <!-- ===== Hero ===== -->
+  <section id="home" class="hero">
+    <div class="hero-inner">
+      <h1>Olá, eu sou <span>Bruno Gabriel</span></h1>
+      <p class="typing">Desenvolvedor Full Stack</p>
+      <a href="#sobre" class="btn">Saiba Mais</a>
+    </div>
+  </section>
+
+  <!-- ===== Sobre ===== -->
+  <section id="sobre" class="container">
+    <h2>Sobre Mim</h2>
+    <div class="sobre-grid">
+      <svg viewBox="0 0 250 250" xmlns="http://www.w3.org/2000/svg" 
+      width="390" height="390">
+        <!-- Definindo a máscara com um caminho orgânico -->
+        <mask id="mask0">
+          <path fill="#fff"
+            d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 
+            165.547 130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 
+            129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 
+            -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z">
+          </path>
+        </mask>
+
+        <!-- Aplicando a máscara -->
+        <g mask="url(#mask0)">
+          <image
+            class="home__blob-img"
+            x="0" y="0"
+            width="200"
+            height="200"
+            xlink:href="assets/img/perfil.png"
+            preserveAspectRatio="xMidYMid slice"
+          />
+        </g>
+      </svg>
+      <p>
+        Olá, sou Bruno Gabriel, tenho <span id="idade"></span> anos. 
+        Sou formado em Engenharia da Computação e atuo como desenvolvedor Full Stack, 
+        criando soluções inovadoras para web e mobile.
+      </p>
+    </div>
+  </section>
+
+  <section id="tecnologias" class="container">
+    <h2>Habilidades</h2>
+
+      <div class="skills-columns">
+        <!-- Coluna 1-->
+        <div class="skills-group">
+          <h3 class="skills-title frontend">⚡ Front‑End</h3>
+          <div class="badge frontend"><i data-feather="monitor"></i><span>HTML5</span></div>
+          <div class="badge frontend"><i data-feather="layers"></i><span>CSS3 / Tailwind</span></div>
+          <div class="badge frontend"><i data-feather="code"></i><span>JS / TypeScript</span></div>
+          <div class="badge frontend"><i data-feather="zap"></i><span>React (Vite)</span></div>
+          <div class="badge frontend"><i data-feather="grid"></i><span>shadcn/ui</span></div>
+        </div>
+
+        <!-- Coluna 2 -->
+        <div class="skills-group">
+          <h3 class="skills-title backend">🔧 Back‑End</h3>
+          <div class="badge backend"><i data-feather="cpu"></i><span>Python / Flask</span></div>
+          <div class="badge backend"><i data-feather="server"></i><span>Python / FastAPI</span></div>
+          <div class="badge backend"><i data-feather="terminal"></i><span>Node / Express</span></div>
+          <div class="badge backend"><i data-feather="box"></i><span>.NET (Core / VB.NET)</span></div>
+          <div class="badge backend"><i data-feather="shuffle"></i><span>REST / GraphQL</span></div>
+        </div>
+
+        <!-- Coluna 3 -->
+        <div class="skills-group">
+          <h3 class="skills-title database">💾 Bancos &amp; Dados</h3>
+          <div class="badge database"><i data-feather="database"></i><span>SQL Server</span></div>
+          <div class="badge database"><i data-feather="database"></i><span>PostgreSQL</span></div>
+          <div class="badge database"><i data-feather="table"></i><span>Baserow</span></div>
+        </div>
+        
+          <!-- Coluna 4 -->
+        <div class="skills-group">
+          <h3 class="skills-title devops" style="margin-top: 2rem;">🚀 DevOps &amp; Ferramentas</h3>
+          <div class="badge devops"><i data-feather="package"></i><span>Docker</span></div>
+          <div class="badge devops"><i data-feather="git-branch"></i><span>Git &amp; GitHub</span></div>
+          <div class="badge devops"><i data-feather="code"></i><span>VS Code</span></div>
+          <div class="badge devops"><i data-feather="codesandbox"></i><span>Visual Studio 2022</span></div>
+        </div>
+      </div>
+
+</div>
+
+
+  </section>
+
+
+  <!-- ===== Portfólio ===== -->
+  <section id="projetos" class="container">
+    <h2>Projetos</h2>
+
+    <!-- filtros -->
+    <div class="filters">
+      <button class="filter active" data-cat="all">Todos</button>
+      <button class="filter" data-cat="web">Web</button>
+      <button class="filter" data-cat="mobile">Mobile</button>
+    </div>
+
+    <!-- grid -->
+    <div class="grid">
+      <figure class="item" data-cat="web">
+        <img src="#" alt="">
+        <figcaption>Projeto 1</figcaption>
+      </figure>
+
+      <figure class="item" data-cat="mobile">
+        <img src="#" alt="">
+        <figcaption>Projeto 2</figcaption>
+      </figure>
+
+      <!-- …adicione quantos quiser -->
+    </div>
+  </section>
+
+  <!-- ===== Experiência (Timeline) ===== -->
+  <section id="experiencia" class="container">
+    <h2>Experiência</h2>
+    <ul class="timeline">
+      <li>
+        <span class="time">2024 – Atual</span>
+        <h3>Desenvolvedor Full Stack Sênior – Empresa X</h3>
+        <p>Angular, .NET Core, SQL Server.</p>
+      </li>
+      <li>
+        <span class="time">2022 – 2024</span>
+        <h3>Dev Pleno – Empresa Y</h3>
+        <p>Node, React, Docker.</p>
+      </li>
+    </ul>
+  </section>
+
+  <!-- ===== Contato ===== -->
+  <section id="contato" class="container contato">
+    <h2>Vamos conversar?</h2>
+    <form action="https://formspree.io/f/SEU_ID" method="POST">
+      <input type="text" name="name" placeholder="Nome" required>
+      <input type="email" name="email" placeholder="E‑mail" required>
+      <textarea name="message" rows="5" placeholder="Mensagem" required></textarea>
+      <button type="submit" class="btn">Enviar</button>
+    </form>
+  </section>
+
+  <!-- ===== Rodapé ===== -->
+  <footer>
+    © 2025 Bruno Gabriel – Todos os direitos reservados
+  </footer>
+
+  <!-- ===== Modal de detalhes do projeto ===== -->
+  <div id="modal" class="modal hidden">
+    <div class="modal-content">
+      <span id="modal-close" class="close">×</span>
+      <h3 id="modal-title"></h3>
+      <img id="modal-img" src="" alt="">
+      <p id="modal-desc"></p>
+      <a id="modal-link" href="#" target="_blank" class="btn" rel="noopener">Acessar Projeto</a>
+    </div>
+  </div>
+
+  <!-- ===== JS principal ===== -->
+  <script src="js/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.29.2/dist/feather.min.js"></script>
+  <script>
+    feather.replace();
+  </script>
+</body>
+
+</html>
