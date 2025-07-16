@@ -24,7 +24,7 @@ filters.forEach(btn => {
 // ===== Modal de detalhes =====
 const modal = document.getElementById('modal');
 const modalTitle = document.getElementById('modal-title');
-const modalVideo = document.getElementById('modal-img');
+const modalVideo = document.getElementById('modal-video');
 const modalDesc = document.getElementById('modal-desc');
 const modalLink = document.getElementById('modal-link');
 
