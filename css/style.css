@@ -91,6 +91,18 @@ a { text-decoration: none; color: inherit; }
 .filters .active, .filters button:hover { background: var(--primary); color: #fff; }
 .grid { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit,minmax(250px,1fr)); }
 .item { cursor: pointer; position: relative; }
+.item video {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, .12);
+  transition: transform .3s, box-shadow .3s;
+}
+
+.item video:hover {
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, .18);
+}
 .item figcaption { position: absolute; inset: 0; background: rgba(0,0,0,.6); color: #fff; opacity: 0; display: flex; align-items: center; justify-content: center; transition:.3s; }
 .item:hover figcaption { opacity: 1; }
 
