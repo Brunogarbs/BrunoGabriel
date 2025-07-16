@@ -24,14 +24,14 @@ filters.forEach(btn => {
 // ===== Modal de detalhes =====
 const modal = document.getElementById('modal');
 const modalTitle = document.getElementById('modal-title');
-const modalImg = document.getElementById('modal-img');
+const modalVideo = document.getElementById('modal-img');
 const modalDesc = document.getElementById('modal-desc');
 const modalLink = document.getElementById('modal-link');
 
 items.forEach(item => {
   item.addEventListener('click', () => {
     modalTitle.textContent = item.querySelector('figcaption').textContent;
-    modalImg.src = item.querySelector('video').src.replace('-thumb', '');
+    modalVideo.src = item.querySelector('video').src.replace('-thumb', '');
     modalDesc.textContent = 'Descrição detalhada do projeto.';
     modalLink.href = '#'; // link real
     modal.classList.remove('hidden');
