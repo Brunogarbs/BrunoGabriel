@@ -19,7 +19,6 @@
       <a href="#sobre">Sobre</a>
       <a href="#tecnologias">Tecnologias</a>
       <a href="#projetos">Projetos</a>
-      <a href="#experiencia">Experiência</a>
       <a href="#contato">Contato</a>
     </nav>
     <button id="btn-mobile" aria-label="Menu mobile">☰</button>
@@ -121,73 +120,50 @@
   <!-- ===== Portfólio ===== -->
   <section id="projetos" class="container">
     <h2>Projetos</h2>
-
-    <!-- filtros -->
+    <!-- Filtros-->
     <div class="filters">
       <button class="filter active" data-cat="all">Todos</button>
       <button class="filter" data-cat=".NET">.NET</button>
-      <button class="filter" data-cat="mobile">Mobile</button>
+      <button class="filter" data-cat="Python">Python</button>
     </div>
-
     <!-- grid -->
-    <div class="grid">
-      <figure class="item" data-cat=".NET">
-        <video id="modal-video" src="assets//projetos/LigaDePg.mp4" controls autoplay></video>
-        <figcaption>Liga de PG</figcaption>
-      </figure>
+    <div class="video-carousel">
+      <button class="carousel-btn left" onclick="prevVideo()">‹</button>
+      <div class="carousel-track">
+        <div class="video-wrapper" data-cat=".NET" onmouseenter="showModal(this)" onmouseleave="hideModal(this)">
+          <video src="assets/projetos/LigaDePg.mp4" controls autoplay muted loop></video>
+          <div class="video-modal">
+            <a href="https://github.com/seu-usuario/seu-repo" target="_blank"><i data-feather="github"></i></a>
+            <a href="https://linkedin.com/in/seu-perfil" target="_blank"><i data-feather="linkedin"></i></a>
+          </div>
+        </div>
+        <div class="video-wrapper" data-cat=".NET" onmouseenter="showModal(this)" onmouseleave="hideModal(this)">
+          <video src="assets/projetos/Teste.mov" controls autoplay muted loop></video>
+          <div class="video-modal">
+            <a href="https://github.com/seu-usuario/seu-repo" target="_blank"><i data-feather="github"></i></a>
+            <a href="https://linkedin.com/in/seu-perfil" target="_blank"><i data-feather="linkedin"></i></a>
+          </div>
+        </div>
+      </div>
 
-      <figure class="item" data-cat="mobile">
-        <img src="assets/projetos/LigaDePg.png" alt="">
-        <figcaption>Projeto 2</figcaption>
-      </figure>
-
-      <!-- …adicione quantos quiser -->
+      <button class="carousel-btn right" onclick="nextVideo()">›</button>
     </div>
   </section>
 
-  <!-- ===== Experiência (Timeline) ===== -->
-  <section id="experiencia" class="container">
-    <h2>Experiência</h2>
-    <ul class="timeline">
-      <li>
-        <span class="time">2024 – Atual</span>
-        <h3>Desenvolvedor Full Stack Sênior – Empresa X</h3>
-        <p>Angular, .NET Core, SQL Server.</p>
-      </li>
-      <li>
-        <span class="time">2022 – 2024</span>
-        <h3>Dev Pleno – Empresa Y</h3>
-        <p>Node, React, Docker.</p>
-      </li>
-    </ul>
-  </section>
+
 
   <!-- ===== Contato ===== -->
   <section id="contato" class="container contato">
-    <h2>Vamos conversar?</h2>
-    <form action="https://formspree.io/f/SEU_ID" method="POST">
-      <input type="text" name="name" placeholder="Nome" required>
-      <input type="email" name="email" placeholder="E‑mail" required>
-      <textarea name="message" rows="5" placeholder="Mensagem" required></textarea>
-      <button type="submit" class="btn">Enviar</button>
-    </form>
+    <h2>Concete-se comigo!</h2>
+    <a href="https://github.com/Brunogarbs/"> <i data-feather="github"></i>Bruno Gabriel da Silva</a>
+    <a href="https://www.linkedin.com/in/bruno-gabriel-da-silva-9b529919a/"> <i data-feather="linkedin"></i>Bruno Gabriel da
+      Silva</a>
   </section>
 
   <!-- ===== Rodapé ===== -->
   <footer>
     © 2025 Bruno Gabriel – Todos os direitos reservados
   </footer>
-
-  <!-- ===== Modal de detalhes do projeto ===== -->
-  <div id="modal" class="modal hidden">
-    <div class="modal-content">
-      <span id="modal-close" class="close">×</span>
-      <h3 id="modal-title"></h3>
-      <img id="modal-img" src="" alt="">
-      <p id="modal-desc"></p>
-      <a id="modal-link" href="#" target="_blank" class="btn" rel="noopener">Acessar Projeto</a>
-    </div>
-  </div>
 
   <!-- ===== JS principal ===== -->
   <script src="js/script.js"></script>
