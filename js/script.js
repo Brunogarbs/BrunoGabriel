@@ -16,16 +16,29 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
   });
 });
 
+// ===== Efeito Digitação ===== //
+const texto = `Oi, eu sou o Bruno Gabriel, tenho 23 anos e sou apaixonado por tecnologia e inovação. 
+Formado em Engenharia da Computação, atuo como desenvolvedor Full Stack, unindo o melhor do front-end e back-end 
+para criar soluções práticas e elegantes para web e mobile. 
+Adoro transformar ideias em produtos digitais que fazem a diferença no dia a dia das pessoas — e estou sempre buscando aprender e me desafiar com novas tecnologias.`;
 
-// ===== Calculo de idade ===== //
-const nascimento = new Date(2002, 6, 7); // ANO, MES, DIA
-const hoje = new Date();
-let idade = hoje.getFullYear() - nascimento.getFullYear();
-const m = hoje.getMonth() - nascimento.getMonth();
-if (m < 0 || (m === 0 && hoje.getDate() < nascimento.getDate())) {
-  idade--;
+const elemento = document.querySelector('.sobre-grid p');
+elemento.textContent = '';
+elemento.classList.add('typing');
+
+let i = 0;
+function digitar() {
+  if (i < texto.length) {
+    elemento.textContent += texto.charAt(i);
+    i++;
+    setTimeout(digitar, 40);
+  } else {
+    elemento.classList.remove('typing');
+  }
 }
-document.getElementById('idade').textContent = idade;
+
+digitar();
+
 
 // ===== Carrossel de vídeos ===== //
 let currentIndex = 0;
@@ -89,6 +102,20 @@ filters.forEach(btn => {
     });
   });
 });
+
+// ===== Dark Mode ===== //
+function toggleDarkMode(event) {
+  event.preventDefault(); // impede o scroll imediato para #home
+  document.body.classList.toggle('dark-mode');
+
+  // scroll suave manual para #home
+  const homeSection = document.querySelector('#home');
+  if (homeSection) {
+    homeSection.scrollIntoView({ behavior: 'smooth' });
+  }
+}
+
+
 
 
 

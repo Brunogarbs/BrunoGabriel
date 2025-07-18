@@ -141,6 +141,35 @@ a {
   color: var(--primary);
 }
 
+.sobre-grid p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #333;
+  max-width: 600px;
+  margin-top: 1rem;
+  font-family: 'Courier New', Courier, monospace;
+  /* Para combinar com efeito de digitação */
+  overflow: hidden;
+  border-right: 3px solid var(--primary);
+  padding-right: 5px;
+  box-sizing: content-box;
+}
+
+@keyframes blinkCursor {
+
+  0%,
+  100% {
+    border-color: transparent;
+  }
+
+  50% {
+    border-color: var(--primary);
+  }
+}
+
+.sobre-grid p.typing {
+  animation: blinkCursor 0.7s step-end infinite;
+}
 /* Skills */
 .skills-columns {
   display: grid;
@@ -449,7 +478,26 @@ footer {
   nav a {
     margin: .5rem 0;
   }
-
+                                                                                                                                .sobre-grid {
+                                                                                                                                  flex-direction: row;
+                                                                                                                                  align-items: flex-start;
+                                                                                                                                  justify-content: center;
+                                                                                                                                  gap: 1rem;
+                                                                                                                                  flex-wrap: nowrap;
+                                                                                                                                  text-align: left;
+                                                                                                                                }
+          
+                                                                                                                                .sobre-grid svg {
+                                                                                                                                  width: 100px;
+                                                                                                                                  height: auto;
+                                                                                                                                }
+                                                                
+                                                                                                                                .sobre-text {
+                                                                                                                                  font-size: 1rem;
+                                                                                                                                  padding: 0;
+                                                                                                                                  border-right: none;
+                                                                                                                                  max-width: 60%;
+                                                                                                                                }
   .carousel-track video {
     width: 400px;
   }
@@ -495,4 +543,139 @@ footer {
     font-size: 0.9rem;
     padding: 0.5rem 1rem;
   }
+}
+
+/* Dark Mode */
+
+/* === DARK MODE COMPLETO === */
+body.dark-mode {
+  --primary: #90caf9;
+  --dark: #f5f5f5;
+  --light: #121212;
+  --gray: #aaa;
+
+  background-color: var(--light);
+  color: var(--dark);
+}
+
+body.dark-mode a {
+  color: var(--primary);
+}
+
+body.dark-mode nav,
+body.dark-mode section,
+body.dark-mode footer,
+body.dark-mode .modal-content {
+  color: var(--dark);
+}
+
+body.dark-mode .navbar {
+  background-color: #1a1a1a;
+  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode .navbar .logo {
+  color: var(--primary);
+}
+
+body.dark-mode .navbar nav a:hover {
+  color: var(--dark);
+}
+
+body.dark-mode .hero {
+  background: linear-gradient(135deg, #1f1f1f, #111);
+  color: #fff;
+}
+
+body.dark-mode .typing {
+  color: #ccc;
+}
+
+body.dark-mode .btn {
+  background-color: #333;
+  color: #fff;
+  border: 1px solid #666;
+}
+
+body.dark-mode .btn:hover {
+  background-color: #555;
+}
+
+body.dark-mode .badge {
+  background: #2a2a2a;
+  color: #f0f0f0;
+  box-shadow: none;
+}
+
+body.dark-mode .card {
+  background-color: #222;
+  color: #f0f0f0;
+  box-shadow: 0 2px 6px rgba(255, 255, 255, 0.07);
+}
+
+body.dark-mode .sobre-grid p {
+  border-right: 3px solid var(--primary);
+  color: #f0f0f0;
+}
+
+body.dark-mode .carousel-btn {
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+body.dark-mode .video-modal a {
+  color: white;
+}
+
+body.dark-mode .video-modal a:first-child {
+  background: #555;
+}
+
+body.dark-mode .video-modal a:hover {
+  opacity: 0.85;
+}
+
+body.dark-mode .filters .filter {
+  background: #333;
+  color: #eee;
+}
+
+body.dark-mode .filters .filter.active {
+  background: var(--primary);
+  color: #000;
+}
+
+body.dark-mode #contato h2 {
+  color: #f0f0f0;
+}
+
+body.dark-mode #contato {
+  background: #1e1e1e;
+  color: #f0f0f0;
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode #contato a {
+  background: #2e2e2e;
+  color: #ccc;
+  box-shadow: none;
+}
+
+body.dark-mode #contato a:hover {
+  background: var(--primary);
+  color: #000;
+}
+
+body.dark-mode footer {
+  background: #181818;
+  color: #999;
+}
+
+body.dark-mode .modal {
+  background: rgba(0, 0, 0, 0.85);
+}
+
+body.dark-mode .modal-content {
+  background: #222;
+  color: #f0f0f0;
 }
