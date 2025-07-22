@@ -478,28 +478,28 @@ footer {
   nav a {
     margin: .5rem 0;
   }
-                                                                                                                                .sobre-grid {
-                                                                                                                                  flex-direction: row;
-                                                                                                                                  align-items: flex-start;
-                                                                                                                                  justify-content: center;
-                                                                                                                                  gap: 1rem;
-                                                                                                                                  flex-wrap: nowrap;
-                                                                                                                                  text-align: left;
-                                                                                                                                }
+.sobre-grid {
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: nowrap;
+  text-align: left;
+}
           
-                                                                                                                                .sobre-grid svg {
-                                                                                                                                  width: 100px;
-                                                                                                                                  height: auto;
-                                                                                                                                }
+.sobre-grid svg {
+  width: 100px;
+  height: auto;
+}
                                                                 
-                                                                                                                                .sobre-text {
-                                                                                                                                  font-size: 1rem;
-                                                                                                                                  padding: 0;
-                                                                                                                                  border-right: none;
-                                                                                                                                  max-width: 60%;
-                                                                                                                                }
+.sobre-text {
+  font-size: 1rem;
+  padding: 0;
+  border-right: none;
+  max-width: 60%;
+}
   .carousel-track video {
-    width: 400px;
+    width: 100vw;
   }
 
   .skills-columns {
@@ -521,9 +521,12 @@ footer {
 /* Para smartphones portrait */
 @media (max-width: 480px) {
   .carousel-track video {
-    width: 100%;
-    max-width: 320px;
-  }
+    width: 83vw;
+    }
+    
+    .video-modal {
+      display: none;
+    }
 
   .btn {
     padding: 0.6rem 1.2rem;
