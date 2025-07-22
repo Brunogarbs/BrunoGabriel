@@ -46,7 +46,13 @@ const track = document.querySelector('.carousel-track');
 const videos = document.querySelectorAll('.carousel-track video');
 
 function updateCarousel() {
-  const videoWidth = videos[0].offsetWidth + 16; // 16 = gap
+  const visibleVideos = Array.from(document.querySelectorAll('.video-wrapper'))
+    .filter(v => v.style.display !== 'none');
+
+  if (visibleVideos.length === 0) return;
+
+  const videoWidth = visibleVideos[0].offsetWidth + 16;
+
   track.style.transform = `translateX(-${currentIndex * videoWidth}px)`;
 }
 
